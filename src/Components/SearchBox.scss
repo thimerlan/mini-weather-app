@@ -1,0 +1,34 @@
+.searchBox {
+	font-family: "Poppins" !important;
+	width: 500px;
+	height: 10vh;
+
+	.searchContent {
+		text-align: center;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 30px;
+		input {
+			background-color: aliceblue;
+			outline: none;
+			border: none;
+			padding: 12px 17px;
+			border-radius: 2ex;
+			&::placeholder {
+				font-weight: 600;
+				color: #222;
+				font-family: "Poppins";
+			}
+		}
+		position: relative;
+		.searchImg {
+			cursor: pointer;
+			position: absolute;
+			right: 30%;
+			width: 5%;
+			object-fit: cover;
+			object-position: center;
+		}
+	}
+}

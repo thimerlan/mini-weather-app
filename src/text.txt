@@ -1,0 +1,23 @@
+const query = (evt) => {
+  if (evt.key === "Enter") {
+    //   axios
+    //     .get(
+    //       `https://api.openweathermap.org/data/2.5/weather?q=${
+    //         search.length ? search : Tashkent
+    //       }&appid=${"62f2d13a98d4cf77e59ce18a4442fff1"}`
+    //     )
+    //     .then((res) => {
+    //       setWeather(res.data);
+    //       setSearch("");
+    //       console.log(weather);
+    //     });
+
+    fetch(`${api.base}weather?q=${search}&units=metric&APPID=${api.key}`)
+      .then((response) => response.json())
+      .then((result) => {
+        setWeather(result);
+        setSearch("");
+        console.log(typeof weather.main);
+      });
+  }
+};
